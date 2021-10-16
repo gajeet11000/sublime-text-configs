@@ -1,0 +1,16 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"A File Icon",
+		"AdvancedNewFile",
+		"Package Control",
+		"PackageResourceViewer",
+		"SideBarEnhancements",
+		"Terminal",
+		"Theme - Brogrammer",
+	],
+}
