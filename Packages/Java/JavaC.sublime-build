@@ -1,23 +1,33 @@
-{
-    "shell_cmd": "javac \"$file_name\" && xfce4-terminal --geometry=80x20+300+240 -e 'fish -c \"java ${file_base_name} && read -n1\"'",
+{	
 	"file_regex": "^(...*?):([0-9]*):?([0-9]*)",
 	"selector": "source.java",
+	"working_dir":"$file_path",
 
+	"windows":
+	{
+		"shell_cmd": "javac \"$file_name\" && start cmd /k \"java \"${file_base_name}\" && @echo OFF && echo. && echo ======================= && pause && exit\"",
+	},
 
-     "variants":
-     [
-     	{
-     		"name": "CP",
+	"linux":
+	{
+		"shell_cmd": "javac \"$file_name\" && xfce4-terminal -H -e \"java ${file_base_name}\"",
+	},
 
-     		"linux":
-     		{
+	"variants":
+	[
+	 	{
+	 		"name": "CP",
+
+	 		"windows":
+	 		{
 				"shell_cmd": "javac \"${file_name}\" && java \"${file_base_name}\" < input.txt > output.txt",
-				"file_regex": "^(...*?):([0-9]*):?([0-9]*)",
-				"working_dir":"$file_path",
-				"selector": "source.java"			
 			},
 
-			"shell": true,
-     	},
+			"linux":
+			{
+				"shell_cmd": "javac \"${file_name}\" && java \"${file_base_name}\" < input.txt > output.txt",
+			}
+	 	}
 	]
+
 }
