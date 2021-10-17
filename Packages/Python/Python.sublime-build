@@ -1,0 +1,32 @@
+{
+	"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+	"selector": "source.python",
+	"env": {"PYTAHONIOENCODING": "utf-8"},
+
+	"windows":
+	{
+		"shell_cmd": "start cmd /k \"python \"${file}\" && @echo OFF && echo. && echo ======================= && pause && exit\""
+	},
+
+	"linux":
+	{
+		"shell_cmd": "xfce4-terminal -H -x python \"${file}\"",
+	},
+
+	"variants":
+	[
+		{
+			"name": "CP",
+
+			"windows":
+			{
+				"shell_cmd": "python \"${file}\" < input.txt > output.txt"
+			},
+
+			"linux":
+			{
+				"shell_cmd": "python \"${file}\" < input.txt > output.txt"
+			}
+		}
+	]
+}
