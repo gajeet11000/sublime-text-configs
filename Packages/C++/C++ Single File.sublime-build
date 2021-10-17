@@ -1,24 +1,32 @@
 {
-     "shell_cmd": "g++ -std=c++17 \"${file}\" -o \"${file_base_name}\" -Wall && xfce4-terminal -H -x \"${file_path}/${file_base_name}\"",
-     "file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
-     "working_dir": "${file_path}",
-     "selector": "source.c++, source.cpp, source.cc, source.cxx",
+	"selector": "source.c++, source.cpp, source.cc, source.cxx",
+	"file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
+	"working_dir": "${file_path}",
 
+	"windows":
+	{
+		"shell_cmd": "g++ -std=c++17 -Wall \"${file}\" -o \"${file_path}\\\\${file_base_name}\" && start cmd /k \"${file_base_name} && @echo OFF && echo. && echo ======================= && pause && exit\"",
+	},
 
-     "variants":
-     [
-     	{
-     		"name": "CP",
+	"linux":
+	{
+		"shell_cmd": "g++ -std=c++17 -Wall \"${file}\" -o \"${file_base_name}\" && xfce4-terminal -H -x \"${file_path}/${file_base_name}\"",
+	},
 
-     		"linux":
-     		{
-				"shell_cmd": "g++ -O2 -std=c++17 \"${file}\" -o \"${file_path}/${file_base_name}\" && \"${file_path}/${file_base_name}\" < input.txt > output.txt", 
-				"file_regex": "^(..[^:]):([0-9]+):?([0-9]+)?:? (.)$", 
-				"working_dir": "${file_path}", 
-				"selector": "source.c, source.c++", 			
+	"variants":
+	[
+		{
+			"name": "CP",
+
+			"windows":
+			{
+				"shell_cmd": "g++ -std=c++17 -Wall \"${file}\" -o \"${file_path}\\\\${file_base_name}\" && \"${file_path}\\\\${file_base_name}\" < input.txt > output.txt",
 			},
 
-			"shell": true,
-     	},
+			"linux":
+			{
+				"shell_cmd": "g++ -std=c++17 -Wall \"${file}\" -o \"${file_path}/${file_base_name}\" && \"${file_path}/${file_base_name}\" < input.txt > output.txt",
+			}
+		}
 	]
 }
