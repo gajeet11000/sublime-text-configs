@@ -13,8 +13,8 @@
         "tab_overlap": 0,
         "tab_width": 140,
         "tab_min_width": 50,
-        "tab_height": 50,
-        "mouse_wheel_switch": false,
+        "tab_height": 40,
+        "mouse_wheel_switch": false
     },
     // Tab element
     {
@@ -23,7 +23,7 @@
         "max_margin_trim": 0,
         "hit_test_level": 0,
         "layer0.texture": "",
-        "layer0.tint": [51,51,51],
+        "layer0.tint": [0,0,0],
         "layer0.inner_margin": [0,0],
         "layer0.opacity": 0.7,
         "layer1.texture": "Theme - Brogrammer/Brogrammer/tab-bar@2x.png",
@@ -163,8 +163,7 @@
         "fade": true,
         "fg": [170,170,170],
         "shadow_color": [25,25,25],
-        "shadow_offset": [1, 1],
-        "font.size": 16
+        "shadow_offset": [1, 1]
     },
     {
         "class": "tab_label",
@@ -400,7 +399,7 @@
 
     {
         "class": "sheet_container_control",
-        "layer0.tint": [17,17,17],
+        "layer0.tint": [0,0,0],
         "layer0.opacity": 1
     },
 
@@ -476,12 +475,12 @@
         "layer0.texture": "",
         "layer0.tint": [0,0,0],
         "layer0.opacity": 1,
-        "content_margin": [15, 10]
+        "content_margin": [15, 4]
     },
     // Status bar button
     {
         "class": "status_button",
-        "min_size": [100, 0]
+        "min_size": [50, 0]
     },
     // Status bar label
     {
@@ -546,8 +545,7 @@
         "class": "sidebar_label",
         "color": [170,170,170],
         "shadow_color": [0,0,0],
-        "shadow_offset": [1,1],
-        "font.size": 16
+        "shadow_offset": [1,1]
     },
     // Sidebar folder entry
     {
