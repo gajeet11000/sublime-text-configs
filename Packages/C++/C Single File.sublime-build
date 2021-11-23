@@ -5,12 +5,12 @@
 
 	"windows":
 	{
-		"shell_cmd": "gcc -Wall \"${file}\" -o \"${file_path}\\\\${file_base_name}\" && start cmd /k \"${file_base_name} && @echo OFF && echo. && echo ======================= && pause && exit\"",
+		"shell_cmd": "gcc -Wall -lm \"${file}\" -o \"${file_path}\\\\${file_base_name}\" && start cmd /k \"${file_base_name} && @echo OFF && echo. && echo ======================= && pause && exit\"",
 	},
 
 	"linux":
 	{
-		"shell_cmd": "gcc -Wall \"${file}\" -o \"${file_base_name}\" && xfce4-terminal -H -x \"${file_path}/${file_base_name}\"",
+		"shell_cmd": "gcc -Wall -lm \"${file}\" -o \"${file_base_name}\" && xfce4-terminal -H -x \"${file_path}/${file_base_name}\"",
 	},
 
 	"variants":
@@ -20,12 +20,12 @@
 
 			"windows":
 			{
-				"shell_cmd": "gcc -Wall \"${file}\" -o \"${file_path}\\\\${file_base_name}\" && \"${file_path}\\\\${file_base_name}\" < input.txt > output.txt",
+				"shell_cmd": "gcc -Wall -lm \"${file}\" -o \"${file_path}\\\\${file_base_name}\" && \"${file_path}\\\\${file_base_name}\" < input.txt > output.txt",
 			},
 
 			"linux":
 			{
-				"shell_cmd": "gcc -Wall \"${file}\" -o \"${file_path}/${file_base_name}\" && \"${file_path}/${file_base_name}\" < input.txt > output.txt",
+				"shell_cmd": "gcc -Wall -lm \"${file}\" -o \"${file_path}/${file_base_name}\" && \"${file_path}/${file_base_name}\" < input.txt > output.txt",
 			}
 		}
 	]
