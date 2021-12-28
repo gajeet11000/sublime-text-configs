@@ -1,0 +1,16 @@
+<snippet>
+	<description>Nested for Loop</description>
+	<content><![CDATA[
+for(int i=0 ; i<${1:} ; i++)
+{
+	for(int j=0 ; j<${0:} ; j++)
+	{
+
+	}
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>forij</tabTrigger>
+
+	<scope>(source.java) - meta.preprocessor.include - comment - string</scope>
+</snippet>
