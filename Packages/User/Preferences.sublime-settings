@@ -5,6 +5,5 @@
 	],
 	"theme": "Brogrammer.sublime-theme",
 	"color_scheme": "Packages/Theme - Brogrammer/brogrammer.tmTheme",
-	"font_face": "Cascadia Code SemiBold",
-	
+	"font_face": "Cascadia Code",
 }
