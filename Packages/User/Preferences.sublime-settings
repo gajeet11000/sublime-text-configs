@@ -1,9 +1,9 @@
 {
-	"font_size": 15,
+	"font_size": 17,
 	"ignored_packages":
 	[
 	],
-	"theme": "Brogrammer.sublime-theme",
-	"color_scheme": "Packages/Theme - Brogrammer/brogrammer.tmTheme",
+	"theme": "Default Dark.sublime-theme",
+	"color_scheme": "Monokai.sublime-color-scheme",
 	"font_face": "Cascadia Code",
 }
