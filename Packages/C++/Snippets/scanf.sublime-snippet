@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+scanf("%d${1:}", &${2:});
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>sc</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c, scource.cpp</scope>
+</snippet>

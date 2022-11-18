@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+import java.util.*;
+
+class ${0:${TM_FILENAME/(.*?)(\..+)/$1/}}
+{
+	public static void main(String[] args)
+	{
+		Scanner in = new Scanner(System.in);
+		$1
+	}
+}
+]]></content>
+	<tabTrigger>newfile</tabTrigger>
+	<scope>source.java</scope>
+	<description>fresh start</description>
+</snippet>
