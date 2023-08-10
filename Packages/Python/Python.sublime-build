@@ -10,7 +10,7 @@
 
 	"linux":
 	{
-		"shell_cmd": "konsole -H -x python \"${file}\"",
+		"shell_cmd": "konsole 2> /dev/null --hold -e python \"${file}\"",
 	},
 
 	"variants":

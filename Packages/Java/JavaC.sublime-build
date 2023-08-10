@@ -10,7 +10,7 @@
 
 	"linux":
 	{
-		"shell_cmd": "javac \"$file_name\" && konsole -H -e \"java ${file_base_name}\"",
+		"shell_cmd": "javac \"$file_name\" && konsole 2> /dev/null --hold -e \"java ${file_base_name}\"",
 	},
 
 	"variants":
