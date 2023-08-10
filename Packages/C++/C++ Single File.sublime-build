@@ -10,7 +10,7 @@
 
 	"linux":
 	{
-		"shell_cmd": "g++ -std=c++17 -Wall \"${file}\" -o \"${file_base_name}\" && xfce4-terminal -H -x \"${file_path}/${file_base_name}\"",
+		"shell_cmd": "g++ -std=c++17 -Wall \"${file}\" -o \"${file_base_name}\" && konsole -H -x \"${file_path}/${file_base_name}\"",
 	},
 
 	"variants":

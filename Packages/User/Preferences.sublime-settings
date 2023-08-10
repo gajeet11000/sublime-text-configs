@@ -3,7 +3,5 @@
 	"ignored_packages":
 	[
 	],
-	"theme": "Default Dark.sublime-theme",
-	"color_scheme": "Monokai.sublime-color-scheme",
 	"font_face": "Cascadia Code",
 }

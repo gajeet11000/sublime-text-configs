@@ -10,7 +10,7 @@
 
 	"linux":
 	{
-		"shell_cmd": "xfce4-terminal -H -x python \"${file}\"",
+		"shell_cmd": "konsole -H -x python \"${file}\"",
 	},
 
 	"variants":
